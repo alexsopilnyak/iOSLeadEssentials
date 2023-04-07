@@ -83,13 +83,13 @@ final class RemoteFeedLoaderTests: XCTestCase {
             id: UUID(),
             description: "Desc",
             location: "loc",
-            imageURL: URL(string: "https://a-url.com")!
+            imageURL: URL(string: "https://a-url23423.com")!
         )
         
-        let itemsJSON = ["items": [pair1.json, pair2.json]]
+        let jsonData = makeItemsData([pair1.json, pair2.json])
         
         expect(sut, toCompleteWithResult: .success([pair1.item, pair2.item])) {
-            let jsonData = try! JSONSerialization.data(withJSONObject: itemsJSON)
+           
             client.complete(withStatusCode: 200, data: jsonData)
         }
         
@@ -111,13 +111,18 @@ final class RemoteFeedLoaderTests: XCTestCase {
         )
         
         let jsonDict = [
-            "id": item.id.uuidString,
-            "description": item.description,
-            "location": item.location,
+            "id": id.uuidString,
+            "description": description,
+            "location": location,
             "image": imageURL.absoluteString
         ].compactMapValues { $0 }
         
         return (item, jsonDict)
+    }
+    
+    func makeItemsData(_ itemsJsons: [[String: Any]]) -> Data {
+        let json = ["items": itemsJsons]
+        return try! JSONSerialization.data(withJSONObject: json)
     }
     
     func expect(
