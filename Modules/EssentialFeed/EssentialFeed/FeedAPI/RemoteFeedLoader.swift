@@ -55,5 +55,12 @@ extension RemoteFeedLoader {
 }
 
 private struct Root: Decodable {
-    let items: [FeedItem]
+    let items: [Item]
+}
+
+private struct Item: Equatable, Decodable {
+    let id: UUID
+    let description: String?
+    let location: String?
+    let image: URL
 }
