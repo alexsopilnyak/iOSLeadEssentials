@@ -25,14 +25,13 @@ public final class RemoteFeedLoader {
         self.client = client
     }
     
-    public func load(completion: @escaping (Error)-> Void) {
+    public func load(completion: @escaping (Result)-> Void) {
         client.get(from: url) { result in
             switch result {
             case let .success(response):
-//                break
-                completion(.invalidData)
+                completion(.failure(.invalidData))
             case let .failure(error):
-                completion(.connectivity)
+                completion(.failure(.connectivity))
             }
         }
     }
@@ -42,5 +41,10 @@ extension RemoteFeedLoader {
     public enum Error: Swift.Error {
         case connectivity
         case invalidData
+    }
+    
+    public enum Result: Equatable {
+        case success([FeedItem])
+        case failure(Error)
     }
 }
