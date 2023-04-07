@@ -16,7 +16,7 @@ final class RemoteFeedLoaderTests: XCTestCase {
         XCTAssertNil(client.requestedURL)
     }
     
-    func test_loadDataFromURL() {
+    func test_load_requestsDataFromURL() {
         let (sut, client) = makeSUT()
         
         sut.load()
