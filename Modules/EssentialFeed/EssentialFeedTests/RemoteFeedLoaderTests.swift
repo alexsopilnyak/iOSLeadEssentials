@@ -68,7 +68,7 @@ final class RemoteFeedLoaderTests: XCTestCase {
         let (sut, client) = makeSUT()
         
         expect(sut, toCompleteWithResult: .success([])) {
-            let jsonData = Data("{\"items\": []}".utf8)
+            let jsonData = makeItemsData([])
             client.complete(withStatusCode: 200, data: jsonData)
         }
     }
@@ -129,7 +129,7 @@ final class RemoteFeedLoaderTests: XCTestCase {
         _ sut: RemoteFeedLoader,
         toCompleteWithResult result: RemoteFeedLoader.Result,
         when action: () -> Void,
-        file: StaticString = #file,
+        file: StaticString = #filePath,
         line: UInt = #line
     ) {
             var capturedResults = [RemoteFeedLoader.Result]()
