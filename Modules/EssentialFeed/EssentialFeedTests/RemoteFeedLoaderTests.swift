@@ -19,7 +19,7 @@ final class RemoteFeedLoaderTests: XCTestCase {
         let (sut, client) = makeSUT()
         let url = URL(string: "https://a-url.com")!
          
-        sut.load {_ in }
+        sut.load { _ in }
         
         XCTAssertEqual(client.requestedURLs, [url])
     }
@@ -171,8 +171,22 @@ final class RemoteFeedLoaderTests: XCTestCase {
     
     private func makeSUT(
         url: URL = URL(string: "https://a-url.com")!,
-        client: HTTPClientSpy = HTTPClientSpy()
+        client: HTTPClientSpy = HTTPClientSpy(),
+        file: StaticString = #filePath,
+        line: UInt = #line
     ) -> (RemoteFeedLoader, HTTPClientSpy) {
-        (RemoteFeedLoader(url: url, client: client), client)
+        let client = HTTPClientSpy()
+        let sut = RemoteFeedLoader(url: url, client: client)
+        
+        trackForMemoryLeak(sut, file: file, line: line)
+        trackForMemoryLeak(client, file: file, line: line)
+        
+        return (sut, client)
+    }
+    
+    private func trackForMemoryLeak(_ instance: AnyObject, file: StaticString = #filePath, line: UInt = #line) {
+        addTeardownBlock { [weak instance] in
+            XCTAssertNil(instance, "Instance should be dealocated. Memory leak", file: file, line: line)
+        }
     }
 }
