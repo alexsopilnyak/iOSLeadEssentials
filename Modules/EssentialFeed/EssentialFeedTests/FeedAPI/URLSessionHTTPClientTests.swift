@@ -142,7 +142,7 @@ private extension URLSessionHTTPClientTests {
         file: StaticString = #filePath,
         line: UInt = #line
     ) -> HTTPClientResult {
-        let exp = expectation(description: "Waint for an error")
+        let exp = expectation(description: "Wait for an error")
         let sut = makeSUT(file: file, line: line)
         
         var receivedResult: HTTPClientResult!
@@ -216,6 +216,7 @@ private extension URLSessionHTTPClientTests {
         static func stopInterceptingRequests() {
             URLProtocol.unregisterClass(URLProtocolStub.self)
             stub = nil
+            requestObserver = nil
         }
     }
 }
