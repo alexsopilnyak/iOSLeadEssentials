@@ -128,7 +128,7 @@ private extension CacheFeedUseCaseTests {
         let exp = expectation(description: "Wait for completion")
         
         var receivedError: Error?
-        sut.save( uniqueItems().models) { error in
+        sut.save(  uniqueItems().models) { error in
             receivedError = error
             exp.fulfill()
         }
