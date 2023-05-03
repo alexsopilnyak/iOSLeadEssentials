@@ -88,9 +88,7 @@ private extension URLSessionHTTPClientTests {
         return sut
     }
     
-    func anyURL() -> URL { URL(string: "https://any-url.com")! }
     func anyData() -> Data { Data("any data".utf8) }
-    func anyNSError() -> NSError { NSError(domain: "any error", code: 0) }
     
     func anyHTTPURLResponse() -> HTTPURLResponse {
         HTTPURLResponse(url: anyURL(), statusCode: 200, httpVersion: nil, headerFields: nil)!
