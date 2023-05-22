@@ -118,6 +118,15 @@ final class CodableFeedStoreTests: XCTestCase {
         expect(sut, toRetieve: .failure(anyNSError()))
     }
     
+    func test_retrieve_hasNoSideEffectsOnFailure() {
+        let storeURL = testSpecificStoreURL()
+        let sut = makeSUT(storeURL: storeURL)
+        
+        try! "inv data".write(to: storeURL, atomically: false, encoding: .utf8)
+        
+        expect(sut, toRetieveTwice: .failure(anyNSError()))
+    }
+    
     func setupEmptyStoreState() {
         deleteStoreArtifacts()
         
