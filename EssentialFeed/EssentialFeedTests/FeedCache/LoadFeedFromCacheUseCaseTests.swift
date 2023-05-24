@@ -154,8 +154,8 @@ private extension LoadFeedFromCacheUseCaseTests {
         let store = FeedStoreSpy()
         let sut = LocalFeedLoader(store: store, currentDate: currentDate)
         
-        trackForMemoryLeak(store, file: file, line: line)
-        trackForMemoryLeak(sut, file: file, line: line)
+        trackForMemoryLeaks(store, file: file, line: line)
+        trackForMemoryLeaks(sut, file: file, line: line)
         
         return (sut, store)
     }
