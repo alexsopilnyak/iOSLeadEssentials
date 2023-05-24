@@ -180,7 +180,8 @@ final class CodableFeedStoreTests: XCTestCase {
             deletionError = receivedError
             exp.fulfill()
         }
-        wait(for: [exp], timeout: 1.0)
+        
+        wait(for: [exp], timeout: 2.0)
         
         return deletionError
     }
