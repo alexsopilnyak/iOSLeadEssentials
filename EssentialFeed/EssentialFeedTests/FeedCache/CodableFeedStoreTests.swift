@@ -178,7 +178,7 @@ final class CodableFeedStoreTests: XCTestCase {
         var deletionError: Error?
         sut.deleteCachedFeed { receivedError in
             deletionError = receivedError
-            exp.fulfill()
+            exp.fulfill() 
         }
         
         wait(for: [exp], timeout: 2.0)
