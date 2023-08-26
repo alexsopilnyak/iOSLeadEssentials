@@ -127,26 +127,33 @@ private extension CacheFeedUseCaseTests {
     ) {
         let exp = expectation(description: "Wait for completion")
         
-        var receivedError: Error?
-        sut.save(  uniqueImageFeed().models) { error in
-            receivedError = error
+        var receivedResult: FeedStore.InsertionResult?
+        sut.save(  uniqueImageFeed().models) { insertionResult in
+            receivedResult = insertionResult
             exp.fulfill()
         }
         
         action()
         wait(for: [exp], timeout: 1.0)
         
-        XCTAssertEqual(
-            (receivedError as NSError?)?.domain,
-            expectedError?.domain,
-            file: file,
-            line: line
-        )
-        XCTAssertEqual(
-            (receivedError as NSError?)?.code,
-            expectedError?.code,
-            file: file,
-            line: line
-        )
+        switch receivedResult {
+        case let .failure(error):
+            XCTAssertEqual(
+                (error as NSError?)?.domain,
+                expectedError?.domain,
+                file: file,
+                line: line
+            )
+            XCTAssertEqual(
+                (error as NSError?)?.code,
+                expectedError?.code,
+                file: file,
+                line: line
+            )
+        case .success:
+            XCTAssertNil(expectedError, file: file, line: line)
+        default:
+            XCTFail("Expect failure, got success instead", file: file, line: line)
+        }
     }
 }
