@@ -139,11 +139,11 @@ private extension URLSessionHTTPClientTests {
         error: Error?,
         file: StaticString = #filePath,
         line: UInt = #line
-    ) -> HTTPClientResult {
+    ) -> HTTPClient.Result {
         let exp = expectation(description: "Wait for an error")
         let sut = makeSUT(file: file, line: line)
         
-        var receivedResult: HTTPClientResult!
+        var receivedResult: HTTPClient.Result!
         
         URLProtocolStub.stub(data: data, response: response, error: error)
         
