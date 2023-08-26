@@ -14,16 +14,18 @@ on:
 jobs:    
     build-and-tests-iOS:
         runs-on: macos-latest
+        name: "Build and test on iOS target"
         steps:
             - uses: actions/checkout@v3
             - uses: maxim-lobanov/setup-xcode@v1.5.1
-            - name: Build and test
             - run: xcodebuild clean build test -project EssentialFeed/EssentialFeed.xcodeproj -scheme "CI_iOS" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
     
     build-and-tests-macOS:
         runs-on: macos-latest
+        name: "Build and test on macOS target"
         steps:
-            - uses: actions/checkout@v3
-            - uses: maxim-lobanov/setup-xcode@v1.5.1
-            - name: Build and test
+            - name: "Checkout"
+              uses: actions/checkout@v3
+            - name: "Checkout"
+              uses: maxim-lobanov/setup-xcode@v1.5.1
             - run: xcodebuild clean build test -project EssentialFeed/EssentialFeed.xcodeproj -scheme "CI_macOS" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
