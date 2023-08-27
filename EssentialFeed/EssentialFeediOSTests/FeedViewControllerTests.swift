@@ -2,7 +2,7 @@
 //  FeedViewControllerTests.swift
 //  EssentialFeediOSTests
 //
-//  Created by Oleksandr Sopilniak on 27.08.2023.
+//  Created by Oleksandr Sopilniak on 27 .08.2023.
 //
 
 import XCTest
@@ -21,6 +21,7 @@ final class FeedViewController: UITableViewController {
         super.viewDidLoad()
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(load), for: .valueChanged)
+        refreshControl?.beginRefreshing()
         load()
     }
     
@@ -51,7 +52,15 @@ final class FeedViewControllerTests: XCTestCase {
         XCTAssertEqual(loader.loadCallCount, 2)
         
         sut.refreshControl?.simulatePullToRefresh()
-        XCTAssertEqual(loader.loadCallCount, 3)
+        XCTAssertEqual(loader.loadCallCount, 3 )
+    }
+    
+    func test_viewDidLoad_showsLoadsIndicator() {
+        let (sut, _) = makeSUT()
+        
+        sut.loadViewIfNeeded()
+        
+        XCTAssertEqual(sut.refreshControl?.isRefreshing, true)
     }
     
     private func makeSUT(
