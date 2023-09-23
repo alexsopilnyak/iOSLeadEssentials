@@ -127,21 +127,14 @@ Location</string>
                         </connections>
                     </tableView>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="8mN-ms-At9">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <connections>
-                            <action selector="refresh" destination="BZt-3v-phU" eventType="valueChanged" id="Bab-FH-RgC"/>
+                            <action selector="refresh" destination="8lZ-Up-31f" eventType="valueChanged" id="uLZ-Zh-xet"/>
                         </connections>
                     </refreshControl>
-                    <connections>
-                        <outlet property="refreshController" destination="BZt-3v-phU" id="KoY-kx-Yno"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ppg-Pe-tsq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="BZt-3v-phU" customClass="FeedRefreshViewController" customModule="EssentialFeediOS" customModuleProvider="target">
-                    <connections>
-                        <outlet property="view" destination="8mN-ms-At9" id="XP7-i1-mHK"/>
-                    </connections>
-                </customObject>
             </objects>
             <point key="canvasLocation" x="1418" y="-21"/>
         </scene>
