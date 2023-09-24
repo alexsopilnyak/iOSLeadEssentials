@@ -78,6 +78,7 @@
 		D7D967012AC08EA300FBB1EF /* UIImageView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D967002AC08EA300FBB1EF /* UIImageView+Animations.swift */; };
 		D7D967052AC0942A00FBB1EF /* FeedViewControllerTests+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D967042AC0942A00FBB1EF /* FeedViewControllerTests+Localization.swift */; };
 		D7D967072AC0950B00FBB1EF /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7D967092AC0950B00FBB1EF /* Feed.strings */; };
+		D7D9670E2AC0960500FBB1EF /* FeedLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D9670D2AC0960500FBB1EF /* FeedLocalizationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +202,7 @@
 		D7D967082AC0950B00FBB1EF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
 		D7D9670A2AC0954500FBB1EF /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Feed.strings"; sourceTree = "<group>"; };
 		D7D9670B2AC0957100FBB1EF /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Feed.strings; sourceTree = "<group>"; };
+		D7D9670D2AC0960500FBB1EF /* FeedLocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLocalizationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -512,6 +514,7 @@
 		D7A4CBC72A9A090800216A94 /* EssentialFeediOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				D7D9670C2AC095E900FBB1EF /* FeedPresentation */,
 				D7D967062AC094B500FBB1EF /* Feed UI */,
 				D7A4CBD72A9B207B00216A94 /* EssentialFeediOS.xctestplan */,
 			);
@@ -532,6 +535,14 @@
 				D7A4CBD52A9B1D3A00216A94 /* FeedUIIntegrationTests.swift */,
 			);
 			path = "Feed UI";
+			sourceTree = "<group>";
+		};
+		D7D9670C2AC095E900FBB1EF /* FeedPresentation */ = {
+			isa = PBXGroup;
+			children = (
+				D7D9670D2AC0960500FBB1EF /* FeedLocalizationTests.swift */,
+			);
+			path = FeedPresentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -863,6 +874,7 @@
 			files = (
 				D73C03CA2ABAEF0A005E97AC /* UIImageView+TestHelpers.swift in Sources */,
 				D73C03D02ABAF0E5005E97AC /* UIControl+TestHelpers.swift in Sources */,
+				D7D9670E2AC0960500FBB1EF /* FeedLocalizationTests.swift in Sources */,
 				D73C03CE2ABAF014005E97AC /* UIButton+TestHelpers.swift in Sources */,
 				D73C03CC2ABAEFCF005E97AC /* UIRefreshControl+TestHelpers.swift in Sources */,
 				D73C03D82ABAF259005E97AC /* FeedViewControllerTests+LoaderSpy.swift in Sources */,
