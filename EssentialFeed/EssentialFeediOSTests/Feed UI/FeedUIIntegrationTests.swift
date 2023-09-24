@@ -10,7 +10,7 @@ import UIKit
 import EssentialFeed
 import EssentialFeediOS
 
-final class FeedViewControllerTests: XCTestCase {
+final class FeedUIIntegrationTests: XCTestCase {
     func test_feedView_hasTitle() {
         let (sut, _) = makeSUT()
         
@@ -260,7 +260,7 @@ final class FeedViewControllerTests: XCTestCase {
 
 // MARK: - Helpers
 
-private extension FeedViewControllerTests {
+private extension FeedUIIntegrationTests {
     private func makeImage(
         description: String? = nil,
         location: String? = nil,
