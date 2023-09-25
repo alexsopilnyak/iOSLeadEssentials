@@ -81,6 +81,7 @@
 		D7D9670E2AC0960500FBB1EF /* FeedLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D9670D2AC0960500FBB1EF /* FeedLocalizationTests.swift */; };
 		D7D967102AC1730B00FBB1EF /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D9670F2AC1730B00FBB1EF /* MainQueueDispatchDecorator.swift */; };
 		D7D967122AC1778800FBB1EF /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D967112AC1778800FBB1EF /* WeakRefVirtualProxy.swift */; };
+		D7D967142AC1780700FBB1EF /* FeedImageDataLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D967132AC1780700FBB1EF /* FeedImageDataLoaderPresentationAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,6 +208,7 @@
 		D7D9670D2AC0960500FBB1EF /* FeedLocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLocalizationTests.swift; sourceTree = "<group>"; };
 		D7D9670F2AC1730B00FBB1EF /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 		D7D967112AC1778800FBB1EF /* WeakRefVirtualProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefVirtualProxy.swift; sourceTree = "<group>"; };
+		D7D967132AC1780700FBB1EF /* FeedImageDataLoaderPresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderPresentationAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -356,6 +358,7 @@
 			children = (
 				D73C03DE2ABAF9F5005E97AC /* FeedUIComposer.swift */,
 				D7D9670F2AC1730B00FBB1EF /* MainQueueDispatchDecorator.swift */,
+				D7D967132AC1780700FBB1EF /* FeedImageDataLoaderPresentationAdapter.swift */,
 				D7D967112AC1778800FBB1EF /* WeakRefVirtualProxy.swift */,
 			);
 			path = Composers;
@@ -871,6 +874,7 @@
 				D7D967122AC1778800FBB1EF /* WeakRefVirtualProxy.swift in Sources */,
 				D7D966FF2AC08E3C00FBB1EF /* UITableView+Extensions.swift in Sources */,
 				D730B9902A9B65FC00B34BF1 /* FeedImageCell.swift in Sources */,
+				D7D967142AC1780700FBB1EF /* FeedImageDataLoaderPresentationAdapter.swift in Sources */,
 				D73C03DC2ABAF6BE005E97AC /* FeedImageCellController.swift in Sources */,
 				D73C03DF2ABAF9F5005E97AC /* FeedUIComposer.swift in Sources */,
 			);
