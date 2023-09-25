@@ -82,6 +82,7 @@
 		D7D967102AC1730B00FBB1EF /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D9670F2AC1730B00FBB1EF /* MainQueueDispatchDecorator.swift */; };
 		D7D967122AC1778800FBB1EF /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D967112AC1778800FBB1EF /* WeakRefVirtualProxy.swift */; };
 		D7D967142AC1780700FBB1EF /* FeedImageDataLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D967132AC1780700FBB1EF /* FeedImageDataLoaderPresentationAdapter.swift */; };
+		D7D967162AC1786600FBB1EF /* FeedLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D967152AC1786600FBB1EF /* FeedLoaderPresentationAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +210,7 @@
 		D7D9670F2AC1730B00FBB1EF /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 		D7D967112AC1778800FBB1EF /* WeakRefVirtualProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefVirtualProxy.swift; sourceTree = "<group>"; };
 		D7D967132AC1780700FBB1EF /* FeedImageDataLoaderPresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderPresentationAdapter.swift; sourceTree = "<group>"; };
+		D7D967152AC1786600FBB1EF /* FeedLoaderPresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderPresentationAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +361,7 @@
 				D73C03DE2ABAF9F5005E97AC /* FeedUIComposer.swift */,
 				D7D9670F2AC1730B00FBB1EF /* MainQueueDispatchDecorator.swift */,
 				D7D967132AC1780700FBB1EF /* FeedImageDataLoaderPresentationAdapter.swift */,
+				D7D967152AC1786600FBB1EF /* FeedLoaderPresentationAdapter.swift */,
 				D7D967112AC1778800FBB1EF /* WeakRefVirtualProxy.swift */,
 			);
 			path = Composers;
@@ -868,6 +871,7 @@
 				D7D966F92ABDFD9300FBB1EF /* FeedLoadingViewModel.swift in Sources */,
 				D7943D292A9B7FFC00FECA95 /* UIView+Shimmering.swift in Sources */,
 				D7D967102AC1730B00FBB1EF /* MainQueueDispatchDecorator.swift in Sources */,
+				D7D967162AC1786600FBB1EF /* FeedLoaderPresentationAdapter.swift in Sources */,
 				D7D966F52ABDF87B00FBB1EF /* FeedImagePresenter.swift in Sources */,
 				D7D967012AC08EA300FBB1EF /* UIImageView+Animations.swift in Sources */,
 				D730B98E2A9B318900B34BF1 /* FeedViewController.swift in Sources */,
