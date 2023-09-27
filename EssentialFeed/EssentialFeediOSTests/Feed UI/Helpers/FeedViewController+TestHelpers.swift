@@ -9,6 +9,10 @@ import UIKit
 import EssentialFeediOS
 
 extension FeedViewController {
+    var errorMessage: String? {
+            return errorView.message
+        }
+    
     func simulateUserInitiatedFeedReload() {
         refreshControl?.simulatePullToRefresh()
     }
