@@ -21,6 +21,7 @@
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxk-1k-4N3">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="64"/>
+                                    <gestureRecognizers/>
                                     <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -29,6 +30,7 @@
                             </subviews>
                             <viewLayoutGuide key="safeArea" id="12V-hC-4aC"/>
                             <color key="backgroundColor" red="1" green="0.56591841061908976" blue="0.7680203808720838" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <gestureRecognizers/>
                             <constraints>
                                 <constraint firstItem="Hxk-1k-4N3" firstAttribute="leading" secondItem="gfe-w3-UO6" secondAttribute="leading" id="INg-VC-FEG"/>
                                 <constraint firstAttribute="trailing" secondItem="Hxk-1k-4N3" secondAttribute="trailing" id="QeQ-8g-lln"/>
@@ -170,6 +172,11 @@ Location</string>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ppg-Pe-tsq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Y3S-tt-OvH">
+                    <connections>
+                        <action selector="hideMessageAnimated" destination="gfe-w3-UO6" id="o2S-gO-5oy"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1418" y="-21"/>
         </scene>
