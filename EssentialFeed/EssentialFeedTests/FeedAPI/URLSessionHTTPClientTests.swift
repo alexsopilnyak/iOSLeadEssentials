@@ -104,8 +104,6 @@ private extension URLSessionHTTPClientTests {
         return sut
     }
     
-    func anyData() -> Data { Data("any data".utf8) }
-    
     func anyHTTPURLResponse() -> HTTPURLResponse {
         HTTPURLResponse(url: anyURL(), statusCode: 200, httpVersion: nil, headerFields: nil)!
     }
