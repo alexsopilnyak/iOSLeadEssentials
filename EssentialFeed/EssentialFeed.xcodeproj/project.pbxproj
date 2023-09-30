@@ -90,6 +90,7 @@
 		D7D967162AC1786600FBB1EF /* FeedLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D967152AC1786600FBB1EF /* FeedLoaderPresentationAdapter.swift */; };
 		D7D967182AC1793500FBB1EF /* FeedViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D967172AC1793500FBB1EF /* FeedViewAdapter.swift */; };
 		D7ED4DA52AC819850064706C /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ED4DA42AC819850064706C /* FeedImageDataLoader.swift */; };
+		D7ED4DA72AC81A370064706C /* RemoteFeedImageDataLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ED4DA62AC81A370064706C /* RemoteFeedImageDataLoaderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -225,6 +226,7 @@
 		D7D967152AC1786600FBB1EF /* FeedLoaderPresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderPresentationAdapter.swift; sourceTree = "<group>"; };
 		D7D967172AC1793500FBB1EF /* FeedViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewAdapter.swift; sourceTree = "<group>"; };
 		D7ED4DA42AC819850064706C /* FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoader.swift; sourceTree = "<group>"; };
+		D7ED4DA62AC81A370064706C /* RemoteFeedImageDataLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedImageDataLoaderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,6 +404,7 @@
 			children = (
 				D7961CF029DEFE8500B04BBE /* LoadFeedFromRemoteUseCaseTests.swift */,
 				D770F0E729E7D8C50010A21D /* URLSessionHTTPClientTests.swift */,
+				D7ED4DA62AC81A370064706C /* RemoteFeedImageDataLoaderTests.swift */,
 			);
 			path = FeedAPI;
 			sourceTree = "<group>";
@@ -874,6 +877,7 @@
 				D736999A2A025F5B00274444 /* FeedCacheTestHelpers.swift in Sources */,
 				D7961CF129DEFE8500B04BBE /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
 				D79A67A42AC60D9C00FC1403 /* FeedPresenterTests.swift in Sources */,
+				D7ED4DA72AC81A370064706C /* RemoteFeedImageDataLoaderTests.swift in Sources */,
 				D770F0E829E7D8C50010A21D /* URLSessionHTTPClientTests.swift in Sources */,
 				D72FADAD2AC6BDB700F69464 /* FeedImagePresenterTests.swift in Sources */,
 				D77A3D592A1DF6F000BCF8D1 /* XCTestCase+FailableInsertFeedStoreSpecs.swift in Sources */,
