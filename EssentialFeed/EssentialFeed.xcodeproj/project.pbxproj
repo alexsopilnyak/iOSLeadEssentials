@@ -90,7 +90,7 @@
 		D7D967162AC1786600FBB1EF /* FeedLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D967152AC1786600FBB1EF /* FeedLoaderPresentationAdapter.swift */; };
 		D7D967182AC1793500FBB1EF /* FeedViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D967172AC1793500FBB1EF /* FeedViewAdapter.swift */; };
 		D7ED4DA52AC819850064706C /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ED4DA42AC819850064706C /* FeedImageDataLoader.swift */; };
-		D7ED4DA72AC81A370064706C /* RemoteFeedImageDataLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ED4DA62AC81A370064706C /* RemoteFeedImageDataLoaderTests.swift */; };
+		D7ED4DA72AC81A370064706C /* LoadFeedImageDataFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ED4DA62AC81A370064706C /* LoadFeedImageDataFromRemoteUseCaseTests.swift */; };
 		D7ED4DAA2AC837730064706C /* HTTPClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ED4DA92AC837730064706C /* HTTPClientSpy.swift */; };
 		D7ED4DAC2AC837B50064706C /* RemoteFeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ED4DAB2AC837B50064706C /* RemoteFeedImageDataLoader.swift */; };
 		D7ED4DB02AC83B3B0064706C /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ED4DAD2AC83A960064706C /* HTTPURLResponse+StatusCode.swift */; };
@@ -230,7 +230,7 @@
 		D7D967152AC1786600FBB1EF /* FeedLoaderPresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderPresentationAdapter.swift; sourceTree = "<group>"; };
 		D7D967172AC1793500FBB1EF /* FeedViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewAdapter.swift; sourceTree = "<group>"; };
 		D7ED4DA42AC819850064706C /* FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoader.swift; sourceTree = "<group>"; };
-		D7ED4DA62AC81A370064706C /* RemoteFeedImageDataLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedImageDataLoaderTests.swift; sourceTree = "<group>"; };
+		D7ED4DA62AC81A370064706C /* LoadFeedImageDataFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedImageDataFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
 		D7ED4DA92AC837730064706C /* HTTPClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientSpy.swift; sourceTree = "<group>"; };
 		D7ED4DAB2AC837B50064706C /* RemoteFeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedImageDataLoader.swift; sourceTree = "<group>"; };
 		D7ED4DAD2AC83A960064706C /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
@@ -413,7 +413,7 @@
 				D7ED4DA82AC837640064706C /* Helpers */,
 				D7961CF029DEFE8500B04BBE /* LoadFeedFromRemoteUseCaseTests.swift */,
 				D770F0E729E7D8C50010A21D /* URLSessionHTTPClientTests.swift */,
-				D7ED4DA62AC81A370064706C /* RemoteFeedImageDataLoaderTests.swift */,
+				D7ED4DA62AC81A370064706C /* LoadFeedImageDataFromRemoteUseCaseTests.swift */,
 			);
 			path = FeedAPI;
 			sourceTree = "<group>";
@@ -908,7 +908,7 @@
 				D7ED4DB22AC83B8F0064706C /* URLProtocolStub.swift in Sources */,
 				D7961CF129DEFE8500B04BBE /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
 				D79A67A42AC60D9C00FC1403 /* FeedPresenterTests.swift in Sources */,
-				D7ED4DA72AC81A370064706C /* RemoteFeedImageDataLoaderTests.swift in Sources */,
+				D7ED4DA72AC81A370064706C /* LoadFeedImageDataFromRemoteUseCaseTests.swift in Sources */,
 				D770F0E829E7D8C50010A21D /* URLSessionHTTPClientTests.swift in Sources */,
 				D72FADAD2AC6BDB700F69464 /* FeedImagePresenterTests.swift in Sources */,
 				D77A3D592A1DF6F000BCF8D1 /* XCTestCase+FailableInsertFeedStoreSpecs.swift in Sources */,
