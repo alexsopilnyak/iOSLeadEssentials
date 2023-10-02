@@ -15,6 +15,7 @@ public class ManagedFeedImage: NSManagedObject {
     @NSManaged public var imageDescription: String?
     @NSManaged public var location: String?
     @NSManaged public var url: URL
+    @NSManaged public var data: Data?
     @NSManaged public var cache: ManagedCache
 }
 
