@@ -80,7 +80,7 @@ final class URLSessionHTTPClientTests: XCTestCase {
         
         let recivedError = resultErrorFor { $0.cancel() } as NSError?
         wait(for: [exp], timeout: 1.0)
-        XCTAssertEqual(recivedError?.code, URLError.cancelled.rawValue)  
+        XCTAssertEqual(recivedError?.code, URLError.cancelled.rawValue)
     }
 }
 
@@ -110,7 +110,7 @@ private extension URLSessionHTTPClientTests {
         file: StaticString = #filePath,
         line: UInt = #line
     ) -> Error? {
-        let result = resultFor(values, file: file, line: line)
+        let result = resultFor(values, taskHandler: taskHandler, file: file, line: line)
         switch result {
         case let .failure(error):
             return error
@@ -148,8 +148,6 @@ private extension URLSessionHTTPClientTests {
         let sut = makeSUT(file: file, line: line)
         
         var receivedResult: HTTPClient.Result!
-        
-        
         
         taskHandler(
             sut.get(from: anyURL()) { result in
