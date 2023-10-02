@@ -24,8 +24,9 @@ final class LocalFeedImageDataLoader: FeedImageDataLoader {
     func loadImageData(from url: URL, completion: @escaping (FeedImageDataLoader.Result) -> Void) -> FeedImageDataLoaderTask {
         let task = Task(completion: completion)
         
-        
-        store.retrieve(dataForURL: url) { result in
+        store.retrieve(dataForURL: url) { [weak self] result in
+            guard self != nil else { return }
+            
             task.complete(with: result
                 .mapError { _ in Error.failed }
                 .flatMap { data in
@@ -119,6 +120,19 @@ final class LocalImageDataLoaderTests: XCTestCase {
         
         XCTAssertTrue(received.isEmpty, "Expected no received results after cancelling task")
     }
+    
+    func test_loadImageDataFromURL_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated() {
+        let store = StoreSpy()
+        var sut: LocalFeedImageDataLoader? = LocalFeedImageDataLoader(store: store)
+        
+        var received = [FeedImageDataLoader.Result]()
+        _ = sut?.loadImageData(from: anyURL()) { received.append($0) }
+        
+        sut = nil
+        store.complete(with: anyData())
+        
+        XCTAssertTrue(received.isEmpty, "Expected no received results after instance has been deallocated")
+    }
 }
 
 private extension LocalImageDataLoaderTests {
@@ -134,8 +148,8 @@ private extension LocalImageDataLoaderTests {
         XCTFail("Expected no no invocations", file: file, line: line)
     }
     
-    func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: LocalFeedImageDataLoader, store: FeedStoreSpy) {
-        let store = FeedStoreSpy()
+    func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: LocalFeedImageDataLoader, store: StoreSpy) {
+        let store = StoreSpy()
         let sut = LocalFeedImageDataLoader(store: store)
         
         trackForMemoryLeaks(store)
@@ -167,7 +181,7 @@ private extension LocalImageDataLoaderTests {
         wait(for: [exp], timeout: 1.0)
     }
     
-    final class FeedStoreSpy: FeedImageDataStore {
+    final class StoreSpy: FeedImageDataStore {
         enum Message: Equatable  {
             case retrieve(dataFor: URL)
         }
