@@ -35,7 +35,7 @@ class FeedStoreSpy: FeedStore {
         deletionCompletions[index](.failure(error))
     }
     
-    func completeDeletionSuccessfuly(at index: Int = 0) {
+    func completeDeletionSuccessfully(at index: Int = 0) {
         deletionCompletions[index](.success(()))
     }
     
