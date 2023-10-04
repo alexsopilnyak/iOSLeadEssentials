@@ -14,6 +14,33 @@ public class RemoteFeedImageDataLoader: FeedImageDataLoader {
         self.client = client
     }
     
+    public func loadImageData(
+        from url: URL,
+        completion: @escaping (FeedImageDataLoader.Result) -> Void
+    ) -> FeedImageDataLoaderTask {
+        let task = HTTPTaskWrapper(completion)
+        
+        task.wrapped = client.get(from: url) { [weak self] result in
+            guard self != nil else { return }
+            
+            task.complete(with: result
+                .mapError {_ in Error.connectivity}
+                .flatMap { data, response in
+                    let isValidResponse = response.isOK && !data.isEmpty
+                    
+                    return isValidResponse ? .success(data) : .failure(Error.invalidData)
+                }
+            )
+        }
+        
+        return task
+    }
+    
+    public enum Error: Swift.Error {
+        case invalidData
+        case connectivity
+    }
+    
     private final class HTTPTaskWrapper: FeedImageDataLoaderTask {
         private var completion: ((FeedImageDataLoader.Result) -> Void)?
         var wrapped: HTTPClientTask?
@@ -34,28 +61,5 @@ public class RemoteFeedImageDataLoader: FeedImageDataLoader {
         func preventFurtherCompletions() {
             completion = nil
         }
-    }
-    
-    public enum Error: Swift.Error {
-        case invalidData
-        case connectivity
-    }
-    
-    public func loadImageData(from url: URL, completion: @escaping (FeedImageDataLoader.Result) -> Void) -> FeedImageDataLoaderTask {
-        let task = HTTPTaskWrapper(completion)
-        task.wrapped = client.get(from: url) { [weak self] result in
-            guard self != nil else { return }
-            
-            task.complete(with: result
-                .mapError {_ in Error.connectivity}
-                .flatMap { data, response in
-                    let isValidResponse = response.isOK && !data.isEmpty
-                    
-                    return isValidResponse ? .success(data) : .failure(Error.invalidData)
-                }
-            )
-        }
-        
-        return task
     }
 }
