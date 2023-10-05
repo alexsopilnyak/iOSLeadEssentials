@@ -27,6 +27,7 @@
 		D786D1592ACE9E1D003E23C4 /* FeedLoaderCacheDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786D1582ACE9E1D003E23C4 /* FeedLoaderCacheDecoratorTests.swift */; };
 		D786D15B2ACEA062003E23C4 /* FeedLoaderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786D15A2ACEA062003E23C4 /* FeedLoaderStub.swift */; };
 		D786D15D2ACEA0FE003E23C4 /* XCTestCase+FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786D15C2ACEA0FE003E23C4 /* XCTestCase+FeedLoader.swift */; };
+		D786D1612ACEAD66003E23C4 /* FeedLoaderCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786D1602ACEAD66003E23C4 /* FeedLoaderCacheDecorator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		D786D1582ACE9E1D003E23C4 /* FeedLoaderCacheDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderCacheDecoratorTests.swift; sourceTree = "<group>"; };
 		D786D15A2ACEA062003E23C4 /* FeedLoaderStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderStub.swift; sourceTree = "<group>"; };
 		D786D15C2ACEA0FE003E23C4 /* XCTestCase+FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedLoader.swift"; sourceTree = "<group>"; };
+		D786D1602ACEAD66003E23C4 /* FeedLoaderCacheDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderCacheDecorator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				D786D0F22ACDEE1B003E23C4 /* Info.plist */,
 				D786D1362ACDFE4D003E23C4 /* FeedLoaderWithFallbackComposite.swift */,
 				D786D13A2ACE022A003E23C4 /* FeedImageDataLoaderWithFallbackComposite.swift */,
+				D786D1602ACEAD66003E23C4 /* FeedLoaderCacheDecorator.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				D786D0E92ACDEE1A003E23C4 /* ViewController.swift in Sources */,
 				D786D0E52ACDEE1A003E23C4 /* AppDelegate.swift in Sources */,
 				D786D1372ACDFE4D003E23C4 /* FeedLoaderWithFallbackComposite.swift in Sources */,
+				D786D1612ACEAD66003E23C4 /* FeedLoaderCacheDecorator.swift in Sources */,
 				D786D0E72ACDEE1A003E23C4 /* SceneDelegate.swift in Sources */,
 				D786D13B2ACE022A003E23C4 /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */,
 			);
