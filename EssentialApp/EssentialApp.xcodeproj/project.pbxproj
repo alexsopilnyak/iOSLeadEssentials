@@ -23,6 +23,7 @@
 		D786D13B2ACE022A003E23C4 /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786D13A2ACE022A003E23C4 /* FeedImageDataLoaderWithFallbackComposite.swift */; };
 		D786D13E2ACE028B003E23C4 /* XCTestCase+MemoryLeaksTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786D13D2ACE028B003E23C4 /* XCTestCase+MemoryLeaksTracking.swift */; };
 		D786D1402ACE02DA003E23C4 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786D13F2ACE02DA003E23C4 /* SharedTestHelpers.swift */; };
+		D786D1572ACE9A13003E23C4 /* EssentialApp.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = D786D1562ACE9A13003E23C4 /* EssentialApp.xctestplan */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		D786D13A2ACE022A003E23C4 /* FeedImageDataLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 		D786D13D2ACE028B003E23C4 /* XCTestCase+MemoryLeaksTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeaksTracking.swift"; sourceTree = "<group>"; };
 		D786D13F2ACE02DA003E23C4 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
+		D786D1562ACE9A13003E23C4 /* EssentialApp.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = EssentialApp.xctestplan; path = EssentialAppTests/EssentialApp.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		D786D0D82ACDEE1A003E23C4 = {
 			isa = PBXGroup;
 			children = (
+				D786D1562ACE9A13003E23C4 /* EssentialApp.xctestplan */,
 				D786D0E32ACDEE1A003E23C4 /* EssentialApp */,
 				D786D0FA2ACDEE1B003E23C4 /* EssentialAppTests */,
 				D786D0E22ACDEE1A003E23C4 /* Products */,
@@ -235,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D786D1572ACE9A13003E23C4 /* EssentialApp.xctestplan in Resources */,
 				D786D0F12ACDEE1B003E23C4 /* LaunchScreen.storyboard in Resources */,
 				D786D0EE2ACDEE1B003E23C4 /* Assets.xcassets in Resources */,
 				D786D0EC2ACDEE1A003E23C4 /* Main.storyboard in Resources */,
