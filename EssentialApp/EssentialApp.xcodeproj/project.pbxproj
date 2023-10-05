@@ -30,6 +30,7 @@
 		D786D1612ACEAD66003E23C4 /* FeedLoaderCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786D1602ACEAD66003E23C4 /* FeedLoaderCacheDecorator.swift */; };
 		D786D1632ACEAF26003E23C4 /* FeedImageDataLoaderCacheDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786D1622ACEAF26003E23C4 /* FeedImageDataLoaderCacheDecoratorTests.swift */; };
 		D786D1652ACEAFC4003E23C4 /* FeedImageDataLoaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786D1642ACEAFC3003E23C4 /* FeedImageDataLoaderSpy.swift */; };
+		D786D1672ACEB041003E23C4 /* XCTestCase+FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786D1662ACEB041003E23C4 /* XCTestCase+FeedImageDataLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		D786D1602ACEAD66003E23C4 /* FeedLoaderCacheDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderCacheDecorator.swift; sourceTree = "<group>"; };
 		D786D1622ACEAF26003E23C4 /* FeedImageDataLoaderCacheDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderCacheDecoratorTests.swift; sourceTree = "<group>"; };
 		D786D1642ACEAFC3003E23C4 /* FeedImageDataLoaderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderSpy.swift; sourceTree = "<group>"; };
+		D786D1662ACEB041003E23C4 /* XCTestCase+FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedImageDataLoader.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 				D786D13F2ACE02DA003E23C4 /* SharedTestHelpers.swift */,
 				D786D15A2ACEA062003E23C4 /* FeedLoaderStub.swift */,
 				D786D1642ACEAFC3003E23C4 /* FeedImageDataLoaderSpy.swift */,
+				D786D1662ACEB041003E23C4 /* XCTestCase+FeedImageDataLoader.swift */,
 				D786D15C2ACEA0FE003E23C4 /* XCTestCase+FeedLoader.swift */,
 			);
 			path = Helpers;
@@ -293,6 +296,7 @@
 				D786D1402ACE02DA003E23C4 /* SharedTestHelpers.swift in Sources */,
 				D786D1632ACEAF26003E23C4 /* FeedImageDataLoaderCacheDecoratorTests.swift in Sources */,
 				D786D15D2ACEA0FE003E23C4 /* XCTestCase+FeedLoader.swift in Sources */,
+				D786D1672ACEB041003E23C4 /* XCTestCase+FeedImageDataLoader.swift in Sources */,
 				D786D1392ACDFF0E003E23C4 /* FeedImageDataLoaderWithFallbackCompositeTests.swift in Sources */,
 				D786D1652ACEAFC4003E23C4 /* FeedImageDataLoaderSpy.swift in Sources */,
 				D786D13E2ACE028B003E23C4 /* XCTestCase+MemoryLeaksTracking.swift in Sources */,
