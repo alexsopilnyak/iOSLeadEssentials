@@ -83,11 +83,11 @@
 		D7961CF129DEFE8500B04BBE /* LoadFeedFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7961CF029DEFE8500B04BBE /* LoadFeedFromRemoteUseCaseTests.swift */; };
 		D7961CF429E0245A00B04BBE /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7961CF329E0245A00B04BBE /* RemoteFeedLoader.swift */; };
 		D79A67A42AC60D9C00FC1403 /* FeedPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79A67A32AC60D9C00FC1403 /* FeedPresenterTests.swift */; };
-		D7A4CBC42A9A090800216A94 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A4CBBC2A9A090700216A94 /* EssentialFeediOS.framework */; };
+		D7A4CBC42A9A090800216A94 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A4CBBC2A9A090700216A94 /* EssentialFeediOS.framework */; platformFilter = ios; };
 		D7A4CBD62A9B1D3A00216A94 /* FeedUIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A4CBD52A9B1D3A00216A94 /* FeedUIIntegrationTests.swift */; };
 		D7A4CBD82A9B207B00216A94 /* EssentialFeediOS.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = D7A4CBD72A9B207B00216A94 /* EssentialFeediOS.xctestplan */; };
-		D7A4CBDA2A9B20B100216A94 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7961CD329DEFD1D00B04BBE /* EssentialFeed.framework */; };
-		D7A4CBDB2A9B20B100216A94 /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7961CD329DEFD1D00B04BBE /* EssentialFeed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D7A4CBDA2A9B20B100216A94 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7961CD329DEFD1D00B04BBE /* EssentialFeed.framework */; platformFilter = ios; };
+		D7A4CBDB2A9B20B100216A94 /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7961CD329DEFD1D00B04BBE /* EssentialFeed.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D7A4CBDF2A9B22CA00216A94 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D784D44D29EAFEE70074B789 /* XCTestCase+MemoryLeakTracking.swift */; };
 		D7D966FB2ABF056500FBB1EF /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7D966FA2ABF056500FBB1EF /* Feed.storyboard */; };
 		D7D966FD2ABF05EF00FBB1EF /* Feed.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7D966FC2ABF05EF00FBB1EF /* Feed.xcassets */; };
@@ -1028,11 +1028,13 @@
 		};
 		D7A4CBC62A9A090800216A94 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = D7A4CBBB2A9A090700216A94 /* EssentialFeediOS */;
 			targetProxy = D7A4CBC52A9A090800216A94 /* PBXContainerItemProxy */;
 		};
 		D7A4CBDD2A9B20B100216A94 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = D7961CD229DEFD1D00B04BBE /* EssentialFeed */;
 			targetProxy = D7A4CBDC2A9B20B100216A94 /* PBXContainerItemProxy */;
 		};
@@ -1396,8 +1398,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1435,8 +1437,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1459,9 +1461,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = alexsopilniak.EssentialFeediOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1486,9 +1488,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = alexsopilniak.EssentialFeediOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
