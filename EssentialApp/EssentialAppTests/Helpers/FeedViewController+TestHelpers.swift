@@ -10,8 +10,8 @@ import EssentialFeediOS
 
 extension FeedViewController {
     var errorMessage: String? {
-            return errorView?.message
-        }
+        return errorView?.message
+    }
     
     func simulateUserInitiatedFeedReload() {
         refreshControl?.simulatePullToRefresh()
@@ -63,5 +63,9 @@ extension FeedViewController {
         let ds = tableView.dataSource
         let index = IndexPath(row: row, section: feedImagesSection)
         return ds?.tableView(tableView, cellForRowAt: index)
+    }
+    
+    func renderedFeedImageData(at index: Int) -> Data? {
+        return simulateFeedImageViewVisible(at: index)?.renderedImage
     }
 }
