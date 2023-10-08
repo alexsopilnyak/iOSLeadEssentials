@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D70238042AD2E403006BFFC9 /* FeedSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70238032AD2E403006BFFC9 /* FeedSnapshotTests.swift */; };
 		D7179FF729FAE2A5001A6250 /* CacheFeedUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7179FF629FAE2A5001A6250 /* CacheFeedUseCaseTests.swift */; };
 		D7179FFA29FC0233001A6250 /* LocalFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7179FF929FC0233001A6250 /* LocalFeedLoader.swift */; };
 		D7179FFC29FC02E5001A6250 /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7179FFB29FC02E5001A6250 /* FeedStore.swift */; };
@@ -128,6 +129,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D70238032AD2E403006BFFC9 /* FeedSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSnapshotTests.swift; sourceTree = "<group>"; };
+		D70238052AD2E41E006BFFC9 /* EssentialFeediOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialFeediOS.xctestplan; sourceTree = "<group>"; };
 		D7179FF629FAE2A5001A6250 /* CacheFeedUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFeedUseCaseTests.swift; sourceTree = "<group>"; };
 		D7179FF929FC0233001A6250 /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
 		D7179FFB29FC02E5001A6250 /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
@@ -530,6 +533,8 @@
 		D7A4CBC72A9A090800216A94 /* EssentialFeediOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				D70238032AD2E403006BFFC9 /* FeedSnapshotTests.swift */,
+				D70238052AD2E41E006BFFC9 /* EssentialFeediOS.xctestplan */,
 			);
 			path = EssentialFeediOSTests;
 			sourceTree = "<group>";
@@ -905,6 +910,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7A4CBDF2A9B22CA00216A94 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
+				D70238042AD2E403006BFFC9 /* FeedSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
